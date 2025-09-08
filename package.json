@@ -1,0 +1,49 @@
+{
+  "name": "@your-scope/hello-world-ts",
+  "version": "0.1.0",
+  "description": "A tiny TypeScript hello world library",
+  "keywords": [
+    "hello",
+    "typescript",
+    "library"
+  ],
+  "license": "MIT",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-user/your-repo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-user/your-repo/issues"
+  },
+  "homepage": "https://github.com/your-user/your-repo#readme",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "clean": "rimraf dist",
+    "prepare": "npm run build",
+    "test": "node --version",
+    "release:patch": "npm version patch && git push --follow-tags",
+    "release:minor": "npm version minor && git push --follow-tags",
+    "release:major": "npm version major && git push --follow-tags"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0"
+  }
+}
+
