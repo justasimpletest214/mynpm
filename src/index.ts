@@ -7,7 +7,7 @@ export type HelloOptions = {
  */
 export function hello(options: HelloOptions = {}): string {
   const who = options.name?.trim() || "world";
-  return `Hello, ${who}!`;
+  return `Hello666, ${who}!`;
 }
 
 export default hello;
